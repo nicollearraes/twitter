@@ -29,6 +29,8 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import TweetList from 'containers/TweetList';
+import NewTweet from 'containers/NewTweet';
+
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -64,6 +66,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             </p>
           </CenteredSection>
           <Section>
+            <NewTweet />
             <TweetList />
             <H2>
               <FormattedMessage {...messages.trymeHeader} />

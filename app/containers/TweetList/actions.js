@@ -5,11 +5,11 @@
  */
 
 import {
-  DEFAULT_ACTION,
+  ADD_TWEET,
 } from './constants';
 
-export function defaultAction() {
+export function addTweet() {
   return {
-    type: DEFAULT_ACTION,
+    type: ADD_TWEET,
   };
 }

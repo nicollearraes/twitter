@@ -6,7 +6,7 @@
 
 import { fromJS } from 'immutable';
 import {
-  DEFAULT_ACTION,
+  ADD_TWEET,
 } from './constants';
 
 const initialState = fromJS({
@@ -29,15 +29,23 @@ const initialState = fromJS({
     },
     {
       message: "charlie",
-      username: "charliee",
+      username: "charlie",
+    },
+    {
+      message: "<3",
+      username: "charlie",
     }
   ]
 });
 
 function tweetListReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
+    case ADD_TWEET:
+      const tweets = state.get('tweets').push({
+        message: action.tweet.message,
+        username: action.tweet.username
+      });
+      return state.set('tweets', tweets);
     default:
       return state;
   }

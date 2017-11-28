@@ -4,4 +4,4 @@
  *
  */
 
-export const DEFAULT_ACTION = 'app/TweetList/DEFAULT_ACTION';
+export const ADD_TWEET = 'app/TweetList/ADD_TWEET';
