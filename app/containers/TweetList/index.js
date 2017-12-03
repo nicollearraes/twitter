@@ -22,7 +22,7 @@ export class TweetList extends React.Component { // eslint-disable-line react/pr
     return (
       <div>
         {this.props.tweetlist.tweets.map((tweet) => {
-          return <Tweet username={tweet.username} message={tweet.message} />
+          return <Tweet username={tweet.username} message={tweet.message} date={tweet.date}/>
         })}
       </div>
     );

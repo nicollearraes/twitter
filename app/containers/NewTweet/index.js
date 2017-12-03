@@ -49,7 +49,7 @@ export class NewTweet extends React.Component { // eslint-disable-line react/pre
   }
 
   tweet() {
-    const tweet = { username: 'grumpycat', message: this.input.value }
+    const tweet = { username: 'grumpycat', message: this.input.value, date: new Date().getTime() }
     this.props.dispatch({type: 'app/TweetList/ADD_TWEET', tweet});
     this.input.value = '';
   }
