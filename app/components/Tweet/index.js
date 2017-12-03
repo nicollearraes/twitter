@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -39,7 +40,7 @@ class Tweet extends React.Component { // eslint-disable-line react/prefer-statel
           <Username>{this.props.username}</Username>: {this.props.message}
         </Message>
         <StyleDate>
-          {new Date(this.props.date).toString()}
+          <Moment format="DD/MM/YYYY HH:mm:ss">{new Date(this.props.date).toString()}</Moment>
         </StyleDate>
       </StyleWrapper>
     );

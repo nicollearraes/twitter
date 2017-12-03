@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
+import Moment from 'react-moment';
 
 import messages from './messages';
 import tweetListReducer from 'containers/TweetList/reducer';
