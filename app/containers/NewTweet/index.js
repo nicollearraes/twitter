@@ -42,6 +42,7 @@ export class NewTweet extends React.Component { // eslint-disable-line react/pre
     super(props);
 
     this.tweet = this.tweet.bind(this);
+    this.handleInput = this.handleInput.bind(this);
 
     this.state = {
       message: ''
@@ -54,12 +55,19 @@ export class NewTweet extends React.Component { // eslint-disable-line react/pre
     this.input.value = '';
   }
 
+  handleInput(event) {
+    if (event.key === 'Enter') {
+      this.tweet();
+    }
+  }
+
   render() {
     return (
       <Wrapper>
         <Input
           placeholder="What's happening?"
           onChange={(message) => this.setState({message})}
+          onKeyPress={this.handleInput}
           innerRef={node => {
             this.input = node;
           }}
