@@ -19,9 +19,10 @@ import saga from './saga';
 
 export class TweetList extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
+    const sortedTweet = this.props.tweetlist.tweets.sort((a, b) => b.date - a.date);
     return (
       <div>
-        {this.props.tweetlist.tweets.map((tweet) => {
+        {sortedTweet.map((tweet) => {
           return <Tweet username={tweet.username} message={tweet.message} date={tweet.date}/>
         })}
       </div>

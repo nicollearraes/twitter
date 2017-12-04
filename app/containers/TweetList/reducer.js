@@ -14,32 +14,32 @@ const initialState = fromJS({
     {
       message: "hello",
       username: "charlie",
-      date: 1512272722686,
+      date: 1512272719686,
     },
     {
       message: "it's",
       username: "charlie",
-      date: 1512272722636,
+      date: 1512272720686,
     },
     {
       message: "me",
       username: "charlie",
-      date: 1512272722186,
+      date: 1512272721686,
     },
     {
       message: ",",
       username: "charlie",
-      date: 1512272721686,
+      date: 1512272722186,
     },
     {
       message: "charlie",
       username: "charlie",
-      date: 1512272720686,
+      date: 1512272722636,
     },
     {
       message: "<3",
       username: "charlie",
-      date: 1512272719686,
+      date: 1512272722686,
     }
   ]
 });
